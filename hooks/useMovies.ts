@@ -1,18 +1,18 @@
-import { useQuery } from "@tanstack/react-query";
+import { useInfiniteQuery } from "@tanstack/react-query";
 import api from "../utils/axios";
 
-type Movie = {
+export type Movie = {
     adult: boolean;
     id: number;
     title: string;
     poster_path: string;
     release_date: string;
     overview: string;
+    backdrop_path: string;
 };
 
 type MovieRequest = {
     language?: string;
-    page?: number;
 }
 
 type MovieResponse = {
@@ -30,24 +30,30 @@ type UpcompingAPIResponse = MovieResponse & {
 };
 
 // Hook to fetch the upcoming movies
-export const useUpcomingMovies = ({ language = "en-US", page = 1 }: MovieRequest) => {
-  return useQuery({
-    queryKey: ['upcoming', page, language],
-    queryFn: async (): Promise<UpcompingAPIResponse> => {
-      const response = await api.get(`/upcoming?language=${language}&page=${page}`);
+export const useUpcomingMovies = ({ language = "en-US" }: MovieRequest) => {
+  return useInfiniteQuery({
+    queryKey: ['upcoming', language],
+    queryFn: async ({ pageParam }): Promise<UpcompingAPIResponse> => {
+      const response = await api.get(`/upcoming?language=${language}&page=${pageParam}`);
       return response.data;
-    }
+    },
+    initialPageParam: 1,
+    getNextPageParam: (lastPage) => lastPage.page + 1,
+    getPreviousPageParam: (firstPage) => firstPage.page > 1 ? firstPage.page - 1 : 1
   });
 };
 
 
 // Hook to fetch the popular movies
-export const usePopularMovies = ({ language = "en-US", page = 1 }: MovieRequest) => {
-  return useQuery({
-    queryKey: ['popular', page, language],
-    queryFn: async (): Promise<MovieResponse> => {
-      const response = await api.get(`/popular?language=${language}&page=${page}`);
+export const usePopularMovies = ({ language = "en-US" }: MovieRequest) => {
+  return useInfiniteQuery({
+    queryKey: ['popular', language],
+    queryFn: async ({ pageParam }): Promise<MovieResponse> => {
+      const response = await api.get(`/popular?language=${language}&page=${pageParam}`);
       return response.data;
-    }
+    },
+    initialPageParam: 1,
+    getNextPageParam: (lastPage) => lastPage.page + 1,
+    getPreviousPageParam: (firstPage) => firstPage.page > 1 ? firstPage.page - 1 : 1
   });
 };
