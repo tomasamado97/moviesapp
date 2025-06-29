@@ -1,14 +1,17 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
+
 import api from "../utils/axios";
 
 export type Movie = {
     adult: boolean;
     id: number;
     title: string;
+    original_title: string;
     poster_path: string;
     release_date: string;
     overview: string;
     backdrop_path: string;
+    vote_average: number;
 };
 
 type MovieRequest = {

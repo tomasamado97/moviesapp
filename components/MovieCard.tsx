@@ -1,7 +1,7 @@
-import { ImageBackground, StyleSheet, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import LinearGradient from 'react-native-linear-gradient';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { ImageBackground, StyleSheet, TouchableOpacity } from 'react-native';
 
 import { StackParamList } from '../App';
 import { ThemedText } from './ThemedText';
@@ -33,7 +33,7 @@ const MovieCard = ({ movie }: MovieCardProps) => {
                     end={{ x: 0, y: 0.8 }}
                 >
                     <ThemedText style={styles.movieText}>
-                        {movie.title}
+                        {movie.title.substring(0, 15) + "..."}
                     </ThemedText>
                 </LinearGradient>
             </ImageBackground>

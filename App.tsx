@@ -16,13 +16,13 @@ import { ThemedView } from './components/ThemedView';
 const queryClient = new QueryClient();
 
 export type StackParamList = {
-  Home: undefined;
+  HomeMovies: undefined;
   MovieDetail: { movie: Movie };
 };
 
 export type RootTabParamList = {
-  HomeTabs: undefined;
-  Movies: undefined;
+  Home: undefined;
+  Bookmarks: undefined;
 };
 
 function App() {
@@ -42,19 +42,22 @@ function App() {
               headerShown: false,
               tabBarBackground: () => <ThemedView style={StyleSheet.absoluteFill} />
             }}
-            initialRouteName='HomeTabs'
+            initialRouteName='Home'
           >
             <Tab.Screen
-              name="HomeTabs"
-              component={() => (
+              name="Home"
+              options={{
+                tabBarIcon: ({ focused, color }) => <HomeIcon {...!!focused && { fill: color }} stroke={focused ? focusedIconStroke : iconStroke} width={22} height={22} strokeWidth={1.5} />
+              }}
+              children={() => (
                 <Stack.Navigator
-                  initialRouteName='Home'
+                  initialRouteName='HomeMovies'
                   screenOptions={{
                     headerShown: false
                   }}
                 >
                   <Stack.Screen
-                      name="Home"
+                      name="HomeMovies"
                       component={Home}
                   />
                   <Stack.Screen
@@ -63,12 +66,9 @@ function App() {
                     />
                 </Stack.Navigator>
               )}
-              options={{
-                tabBarIcon: ({ focused, color }) => <HomeIcon {...!!focused && { fill: color }} stroke={focused ? focusedIconStroke : iconStroke} width={22} height={22} strokeWidth={1.5} />
-              }}
             />
             <Tab.Screen
-              name="Movies"
+              name="Bookmarks"
               component={SavedMovies}
               options={{
                 tabBarIcon: ({ focused, color }) => <Bookmark {...!!focused && { fill: color }} stroke={focused ? focusedIconStroke : iconStroke} width={22} height={22} strokeWidth={1.5} />

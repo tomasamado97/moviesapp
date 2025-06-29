@@ -1,5 +1,5 @@
-import React, { createContext, ReactNode } from "react";
 import { useColorScheme } from "react-native";
+import React, { createContext, ReactNode } from "react";
 
 export const ThemeContext = createContext({
     isDarkMode: false

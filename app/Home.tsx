@@ -1,7 +1,10 @@
 import React from "react";
-import { ActivityIndicator, ImageBackground, ScrollView, StyleSheet, TouchableOpacity, useColorScheme } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { ActivityIndicator, ImageBackground, ScrollView, StyleSheet, TouchableOpacity, useColorScheme } from "react-native";
 
+import { StackParamList } from "../App";
 import { IMAGE_URL } from "../utils/config";
 import { Colors } from "../constants/Colors";
 import MovieCard from "../components/MovieCard";
@@ -9,7 +12,10 @@ import { ThemedText } from "../components/ThemedText";
 import { ThemedView } from "../components/ThemedView";
 import { usePopularMovies, useUpcomingMovies } from "../hooks/useMovies";
 
+type NavigationProps = NativeStackNavigationProp<StackParamList, 'MovieDetail'>;
+
 const Home = () => {
+    const navigation = useNavigation<NavigationProps>();
     const { data: upcomingPages, status: statusUpcoming, error: errorUpcoming, fetchNextPage: fetchNextUpcoming } = useUpcomingMovies({});
     const { data: popularPages, status: statusPopular, error: errorPopular, fetchNextPage: fetchNextPopular } = usePopularMovies({});
     const posterMovie = upcomingPages?.pages[0].results[0];
@@ -35,7 +41,7 @@ const Home = () => {
                     >
                         <TouchableOpacity
                             style={styles.posterBtn}
-                            onPress={() => console.log("pressed")}
+                            onPress={() => navigation.navigate("MovieDetail", { movie: posterMovie })}
                         >
                             <ThemedText style={styles.posterText}>
                                 Details
