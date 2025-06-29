@@ -27,13 +27,13 @@ const MovieCard = ({ movie }: MovieCardProps) => {
                 resizeMode='cover'
             >
                  <LinearGradient
-                    colors={['rgba(255, 255, 255, 0.7)', 'transparent']}
+                    colors={['rgba(0, 0, 0, 0.7)', 'transparent']}
                     style={styles.background}
-                    start={{ x: 0, y: 0.1 }}
-                    end={{ x: 0, y: 0.8 }}
+                    start={{ x: 0, y: 0.2 }}
+                    end={{ x: 0, y: 0.9 }}
                 >
-                    <ThemedText style={styles.movieText}>
-                        {movie.title.substring(0, 15) + "..."}
+                    <ThemedText numberOfLines={1} ellipsizeMode='tail' style={styles.movieText}>
+                        {movie.title}
                     </ThemedText>
                 </LinearGradient>
             </ImageBackground>
@@ -52,7 +52,6 @@ const styles = StyleSheet.create({
         borderRadius: 10,
     },
     movieText: {
-        color: "black",
         paddingHorizontal: 10,
         paddingTop: 10,
     },
