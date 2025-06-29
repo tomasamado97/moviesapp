@@ -51,9 +51,8 @@ const HomeNavigator = () => {
 
 function App() {
   const Tab = createBottomTabNavigator<RootTabParamList>();
-  const colorscheme = useColorScheme();
+  const colorscheme = useColorScheme() ?? "light";
   const iconStroke = colorscheme === 'dark' ? "white" : "black";
-  const focusedIconStroke = colorscheme === 'dark' ? "black" : "white";
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -61,7 +60,7 @@ function App() {
         <ThemeContextProvider>
           <Tab.Navigator
             screenOptions={{
-              tabBarActiveTintColor: Colors[colorscheme ?? 'light'].tint,
+              tabBarActiveTintColor: Colors[colorscheme ?? 'light'].tabIconSelected,
               headerShown: false,
               tabBarBackground: () => <ThemedView style={StyleSheet.absoluteFill} />,
             }}
@@ -71,21 +70,42 @@ function App() {
               name="Home"
               component={HomeNavigator}
               options={{
-                tabBarIcon: ({ focused, color }) => <HomeIcon {...!!focused && { fill: color }} stroke={focused ? focusedIconStroke : iconStroke} width={22} height={22} strokeWidth={1.5} />
+                tabBarIcon: ({ focused, color }) => 
+                  <HomeIcon
+                    {...!!focused && { fill: color }}
+                    stroke={focused ? Colors[colorscheme].tabIconDefault : iconStroke}
+                    width={22}
+                    height={22}
+                    strokeWidth={1.5}
+                  />
               }}
             />
             <Tab.Screen
               name="Bookmarks"
               component={SavedMovies}
               options={{
-                tabBarIcon: ({ focused, color }) => <Bookmark {...!!focused && { fill: color }} stroke={focused ? focusedIconStroke : iconStroke} width={22} height={22} strokeWidth={1.5} />
+                tabBarIcon: ({ focused, color }) =>
+                  <Bookmark
+                    {...!!focused && { fill: color }}
+                    stroke={focused ? Colors[colorscheme].tabIconDefault : iconStroke}
+                    width={22}
+                    height={22}
+                    strokeWidth={1.5}
+                  />
               }}
             />
             <Tab.Screen
               name="Search"
               component={SearchMovies}
               options={{
-                tabBarIcon: ({ focused, color }) => <Search {...!!focused && { fill: color }} stroke={focused ? focusedIconStroke : iconStroke} width={22} height={22} strokeWidth={1.5} />
+                tabBarIcon: ({ focused, color }) =>
+                  <Search
+                    {...!!focused && { fill: color }}
+                    stroke={focused ? Colors[colorscheme].tabIconDefault : iconStroke}
+                    width={22}
+                    height={22}
+                    strokeWidth={1.5}
+                  />
               }}
             />
           </Tab.Navigator>

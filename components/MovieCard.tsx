@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
     movieText: {
         paddingHorizontal: 10,
         paddingTop: 10,
+        color: "white"
     },
     background: {
         flex: 1,
