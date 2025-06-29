@@ -1,7 +1,7 @@
 import { StyleSheet, useColorScheme } from 'react-native';
-import { Home as HomeIcon, Bookmark } from "react-native-feather";
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Home as HomeIcon, Bookmark, Search } from "react-native-feather";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer, NavigatorScreenParams } from '@react-navigation/native';
 
@@ -10,6 +10,7 @@ import { Movie } from './hooks/useMovies';
 import MovieDetail from './app/MovieDetail';
 import { Colors } from './constants/Colors';
 import SavedMovies from './app/SavedMovies';
+import SearchMovies from './app/SearchMovies';
 import ThemeContextProvider from './contexts/theme';
 import { ThemedView } from './components/ThemedView';
 
@@ -23,6 +24,7 @@ export type StackParamList = {
 export type RootTabParamList = {
   Home: NavigatorScreenParams<StackParamList>;
   Bookmarks: undefined;
+  Search: undefined;
 };
 
 const HomeNavigator = () => {
@@ -61,7 +63,7 @@ function App() {
             screenOptions={{
               tabBarActiveTintColor: Colors[colorscheme ?? 'light'].tint,
               headerShown: false,
-              tabBarBackground: () => <ThemedView style={StyleSheet.absoluteFill} />
+              tabBarBackground: () => <ThemedView style={StyleSheet.absoluteFill} />,
             }}
             initialRouteName='Home'
           >
@@ -77,6 +79,13 @@ function App() {
               component={SavedMovies}
               options={{
                 tabBarIcon: ({ focused, color }) => <Bookmark {...!!focused && { fill: color }} stroke={focused ? focusedIconStroke : iconStroke} width={22} height={22} strokeWidth={1.5} />
+              }}
+            />
+            <Tab.Screen
+              name="Search"
+              component={SearchMovies}
+              options={{
+                tabBarIcon: ({ focused, color }) => <Search {...!!focused && { fill: color }} stroke={focused ? focusedIconStroke : iconStroke} width={22} height={22} strokeWidth={1.5} />
               }}
             />
           </Tab.Navigator>

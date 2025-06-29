@@ -37,7 +37,7 @@ export const useUpcomingMovies = ({ language = "en-US" }: MovieRequest) => {
   return useInfiniteQuery({
     queryKey: ['upcoming', language],
     queryFn: async ({ pageParam }): Promise<UpcompingAPIResponse> => {
-      const response = await api.get(`/upcoming?language=${language}&page=${pageParam}`);
+      const response = await api.get(`/movie/upcoming?language=${language}&page=${pageParam}`);
       return response.data;
     },
     initialPageParam: 1,
@@ -52,11 +52,26 @@ export const usePopularMovies = ({ language = "en-US" }: MovieRequest) => {
   return useInfiniteQuery({
     queryKey: ['popular', language],
     queryFn: async ({ pageParam }): Promise<MovieResponse> => {
-      const response = await api.get(`/popular?language=${language}&page=${pageParam}`);
+      const response = await api.get(`/movie/popular?language=${language}&page=${pageParam}`);
       return response.data;
     },
     initialPageParam: 1,
     getNextPageParam: (lastPage) => lastPage.page + 1,
     getPreviousPageParam: (firstPage) => firstPage.page > 1 ? firstPage.page - 1 : 1
+  });
+};
+
+// Hook to fetch the popular movies
+export const useSearchMovies = ({ language = "en-US", query }: MovieRequest & { query: string }) => {
+  return useInfiniteQuery({
+    queryKey: ['search', query, language],
+    queryFn: async ({ pageParam }): Promise<MovieResponse> => {
+      const response = await api.get(`/search/movie?query=${query}&language=${language}&page=${pageParam}`);
+      return response.data;
+    },
+    initialPageParam: 1,
+    getNextPageParam: (lastPage) => lastPage.page + 1,
+    getPreviousPageParam: (firstPage) => firstPage.page > 1 ? firstPage.page - 1 : 1,
+    enabled: !!query
   });
 };

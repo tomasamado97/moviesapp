@@ -86,7 +86,7 @@ const Home = () => {
                     }
 
                     {!!errorUpcoming &&
-                        <ThemedText>
+                        <ThemedText style={styles.errorMessage}>
                             {errorUpcoming.message}
                         </ThemedText>
                     }
@@ -128,7 +128,7 @@ const Home = () => {
                     }
 
                     {!!errorPopular &&
-                        <ThemedText>
+                        <ThemedText style={styles.errorMessage}>
                             {errorPopular.message}
                         </ThemedText>
                     }
@@ -194,6 +194,9 @@ const styles = StyleSheet.create({
     seeMoreText: {
         color: "white"
     },
+    errorMessage: {
+        color: "red"
+    }
 });
 
 export default Home;

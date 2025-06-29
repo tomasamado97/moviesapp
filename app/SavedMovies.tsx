@@ -1,16 +1,16 @@
-import { CompositeNavigationProp, useNavigation } from "@react-navigation/native";
+import React, { useCallback, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import React, { useCallback, useEffect, useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { ImageBackground, ScrollView, StyleSheet, TouchableOpacity } from "react-native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { ImageBackground, ScrollView, StyleSheet, TouchableOpacity } from "react-native";
+import { CompositeNavigationProp, useFocusEffect, useNavigation } from "@react-navigation/native";
 
-import { RootTabParamList, StackParamList } from "../App";
 import { Movie } from "../hooks/useMovies";
-import { IMAGE_URL, STORED_MOVIES_KEY } from "../utils/config";
 import { ThemedView } from "../components/ThemedView";
 import { ThemedText } from "../components/ThemedText";
 import { useThemeColor } from "../hooks/useThemeColor";
+import { RootTabParamList, StackParamList } from "../App";
+import { IMAGE_URL, STORED_MOVIES_KEY } from "../utils/config";
 import { BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
 
 type NavigationProps = CompositeNavigationProp<
@@ -34,9 +34,11 @@ const SavedMovies = () => {
         }
     }, []);
 
-    useEffect(() => {
-        getStoredMovies();
-    }, [getStoredMovies]);
+    useFocusEffect(
+        useCallback(() => {
+            getStoredMovies()
+        }, [getStoredMovies])
+    );
 
     return (
         <SafeAreaView style={{ ...styles.container, backgroundColor: bgColor }}>
