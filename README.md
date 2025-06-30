@@ -3,17 +3,28 @@
 - Ruby and Cocoapods (for iOS)
 - Android Studio, Android SDK and Gradle (Comes all together with Android Studio)
 - Java JDK (for Android)
-- npm
 - Git
 - .env file (Provided in the email sent by me)
 - xCode (for iOS)
--
+- Node and npm (Project was built using Node v20.17.0, recommended you use the same.)
 
 # Getting the App running
 
 > **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
 
-## Step 1: Start Metro
+## Step 1: Install dependencies
+
+First we need to install all the dependencies needed by the project.
+
+```sh
+# Using npm
+npm install
+
+# OR using Yarn
+yarn install
+```
+
+## Step 2: Start Metro
 
 First, you will need to run **Metro**, the JavaScript build tool for React Native.
 
@@ -27,7 +38,7 @@ npm start
 yarn start
 ```
 
-## Step 2: Build and run your app
+## Step 3: Build and run your app
 
 With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
 
