@@ -1,0 +1,699 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RatingStars matches snapshot with components 1`] = `
+<View
+  style={
+    [
+      {
+        "backgroundColor": "#151718",
+      },
+      {
+        "alignItems": "center",
+        "display": "flex",
+        "flexDirection": "row",
+      },
+    ]
+  }
+>
+  <RNSVGSvgView
+    align="xMidYMid"
+    bbHeight={12}
+    bbWidth={12}
+    fill="white"
+    focusable={false}
+    height={12}
+    meetOrSlice={0}
+    minX={0}
+    minY={0}
+    stroke="white"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={1}
+    style={
+      [
+        {
+          "backgroundColor": "transparent",
+          "borderWidth": 0,
+        },
+        {
+          "flex": 0,
+          "height": 12,
+          "width": 12,
+        },
+      ]
+    }
+    testID="star-icon"
+    vbHeight={24}
+    vbWidth={24}
+    width={12}
+  >
+    <RNSVGGroup
+      fill={
+        {
+          "payload": 4294967295,
+          "type": 0,
+        }
+      }
+      propList={
+        [
+          "fill",
+          "stroke",
+          "strokeWidth",
+          "strokeLinecap",
+          "strokeLinejoin",
+        ]
+      }
+      stroke={
+        {
+          "payload": 4294967295,
+          "type": 0,
+        }
+      }
+      strokeLinecap={1}
+      strokeLinejoin={1}
+      strokeWidth={1}
+    >
+      <RNSVGPath
+        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+        fill={
+          {
+            "payload": 4278190080,
+            "type": 0,
+          }
+        }
+      />
+    </RNSVGGroup>
+  </RNSVGSvgView>
+  <RNSVGSvgView
+    align="xMidYMid"
+    bbHeight={12}
+    bbWidth={12}
+    fill="white"
+    focusable={false}
+    height={12}
+    meetOrSlice={0}
+    minX={0}
+    minY={0}
+    stroke="white"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={1}
+    style={
+      [
+        {
+          "backgroundColor": "transparent",
+          "borderWidth": 0,
+        },
+        {
+          "flex": 0,
+          "height": 12,
+          "width": 12,
+        },
+      ]
+    }
+    testID="star-icon"
+    vbHeight={24}
+    vbWidth={24}
+    width={12}
+  >
+    <RNSVGGroup
+      fill={
+        {
+          "payload": 4294967295,
+          "type": 0,
+        }
+      }
+      propList={
+        [
+          "fill",
+          "stroke",
+          "strokeWidth",
+          "strokeLinecap",
+          "strokeLinejoin",
+        ]
+      }
+      stroke={
+        {
+          "payload": 4294967295,
+          "type": 0,
+        }
+      }
+      strokeLinecap={1}
+      strokeLinejoin={1}
+      strokeWidth={1}
+    >
+      <RNSVGPath
+        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+        fill={
+          {
+            "payload": 4278190080,
+            "type": 0,
+          }
+        }
+      />
+    </RNSVGGroup>
+  </RNSVGSvgView>
+  <RNSVGSvgView
+    align="xMidYMid"
+    bbHeight={12}
+    bbWidth={12}
+    fill="white"
+    focusable={false}
+    height={12}
+    meetOrSlice={0}
+    minX={0}
+    minY={0}
+    stroke="white"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={1}
+    style={
+      [
+        {
+          "backgroundColor": "transparent",
+          "borderWidth": 0,
+        },
+        {
+          "flex": 0,
+          "height": 12,
+          "width": 12,
+        },
+      ]
+    }
+    testID="star-icon"
+    vbHeight={24}
+    vbWidth={24}
+    width={12}
+  >
+    <RNSVGGroup
+      fill={
+        {
+          "payload": 4294967295,
+          "type": 0,
+        }
+      }
+      propList={
+        [
+          "fill",
+          "stroke",
+          "strokeWidth",
+          "strokeLinecap",
+          "strokeLinejoin",
+        ]
+      }
+      stroke={
+        {
+          "payload": 4294967295,
+          "type": 0,
+        }
+      }
+      strokeLinecap={1}
+      strokeLinejoin={1}
+      strokeWidth={1}
+    >
+      <RNSVGPath
+        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+        fill={
+          {
+            "payload": 4278190080,
+            "type": 0,
+          }
+        }
+      />
+    </RNSVGGroup>
+  </RNSVGSvgView>
+  <RNSVGSvgView
+    align="xMidYMid"
+    bbHeight={12}
+    bbWidth={12}
+    fill="white"
+    focusable={false}
+    height={12}
+    meetOrSlice={0}
+    minX={0}
+    minY={0}
+    stroke="white"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={1}
+    style={
+      [
+        {
+          "backgroundColor": "transparent",
+          "borderWidth": 0,
+        },
+        {
+          "flex": 0,
+          "height": 12,
+          "width": 12,
+        },
+      ]
+    }
+    testID="star-icon"
+    vbHeight={24}
+    vbWidth={24}
+    width={12}
+  >
+    <RNSVGGroup
+      fill={
+        {
+          "payload": 4294967295,
+          "type": 0,
+        }
+      }
+      propList={
+        [
+          "fill",
+          "stroke",
+          "strokeWidth",
+          "strokeLinecap",
+          "strokeLinejoin",
+        ]
+      }
+      stroke={
+        {
+          "payload": 4294967295,
+          "type": 0,
+        }
+      }
+      strokeLinecap={1}
+      strokeLinejoin={1}
+      strokeWidth={1}
+    >
+      <RNSVGPath
+        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+        fill={
+          {
+            "payload": 4278190080,
+            "type": 0,
+          }
+        }
+      />
+    </RNSVGGroup>
+  </RNSVGSvgView>
+  <RNSVGSvgView
+    align="xMidYMid"
+    bbHeight={12}
+    bbWidth={12}
+    fill="white"
+    focusable={false}
+    height={12}
+    meetOrSlice={0}
+    minX={0}
+    minY={0}
+    stroke="white"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={1}
+    style={
+      [
+        {
+          "backgroundColor": "transparent",
+          "borderWidth": 0,
+        },
+        {
+          "flex": 0,
+          "height": 12,
+          "width": 12,
+        },
+      ]
+    }
+    testID="star-icon"
+    vbHeight={24}
+    vbWidth={24}
+    width={12}
+  >
+    <RNSVGGroup
+      fill={
+        {
+          "payload": 4294967295,
+          "type": 0,
+        }
+      }
+      propList={
+        [
+          "fill",
+          "stroke",
+          "strokeWidth",
+          "strokeLinecap",
+          "strokeLinejoin",
+        ]
+      }
+      stroke={
+        {
+          "payload": 4294967295,
+          "type": 0,
+        }
+      }
+      strokeLinecap={1}
+      strokeLinejoin={1}
+      strokeWidth={1}
+    >
+      <RNSVGPath
+        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+        fill={
+          {
+            "payload": 4278190080,
+            "type": 0,
+          }
+        }
+      />
+    </RNSVGGroup>
+  </RNSVGSvgView>
+  <RNSVGSvgView
+    align="xMidYMid"
+    bbHeight={12}
+    bbWidth={12}
+    fill="white"
+    focusable={false}
+    height={12}
+    meetOrSlice={0}
+    minX={0}
+    minY={0}
+    stroke="white"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={1}
+    style={
+      [
+        {
+          "backgroundColor": "transparent",
+          "borderWidth": 0,
+        },
+        {
+          "flex": 0,
+          "height": 12,
+          "width": 12,
+        },
+      ]
+    }
+    testID="star-icon"
+    vbHeight={24}
+    vbWidth={24}
+    width={12}
+  >
+    <RNSVGGroup
+      fill={
+        {
+          "payload": 4294967295,
+          "type": 0,
+        }
+      }
+      propList={
+        [
+          "fill",
+          "stroke",
+          "strokeWidth",
+          "strokeLinecap",
+          "strokeLinejoin",
+        ]
+      }
+      stroke={
+        {
+          "payload": 4294967295,
+          "type": 0,
+        }
+      }
+      strokeLinecap={1}
+      strokeLinejoin={1}
+      strokeWidth={1}
+    >
+      <RNSVGPath
+        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+        fill={
+          {
+            "payload": 4278190080,
+            "type": 0,
+          }
+        }
+      />
+    </RNSVGGroup>
+  </RNSVGSvgView>
+  <RNSVGSvgView
+    align="xMidYMid"
+    bbHeight={12}
+    bbWidth={12}
+    fill="white"
+    focusable={false}
+    height={12}
+    meetOrSlice={0}
+    minX={0}
+    minY={0}
+    stroke="white"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={1}
+    style={
+      [
+        {
+          "backgroundColor": "transparent",
+          "borderWidth": 0,
+        },
+        {
+          "flex": 0,
+          "height": 12,
+          "width": 12,
+        },
+      ]
+    }
+    testID="star-icon"
+    vbHeight={24}
+    vbWidth={24}
+    width={12}
+  >
+    <RNSVGGroup
+      fill={
+        {
+          "payload": 4294967295,
+          "type": 0,
+        }
+      }
+      propList={
+        [
+          "fill",
+          "stroke",
+          "strokeWidth",
+          "strokeLinecap",
+          "strokeLinejoin",
+        ]
+      }
+      stroke={
+        {
+          "payload": 4294967295,
+          "type": 0,
+        }
+      }
+      strokeLinecap={1}
+      strokeLinejoin={1}
+      strokeWidth={1}
+    >
+      <RNSVGPath
+        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+        fill={
+          {
+            "payload": 4278190080,
+            "type": 0,
+          }
+        }
+      />
+    </RNSVGGroup>
+  </RNSVGSvgView>
+  <RNSVGSvgView
+    align="xMidYMid"
+    bbHeight={12}
+    bbWidth={12}
+    fill="white"
+    focusable={false}
+    height={12}
+    meetOrSlice={0}
+    minX={0}
+    minY={0}
+    stroke="white"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={1}
+    style={
+      [
+        {
+          "backgroundColor": "transparent",
+          "borderWidth": 0,
+        },
+        {
+          "flex": 0,
+          "height": 12,
+          "width": 12,
+        },
+      ]
+    }
+    testID="star-icon"
+    vbHeight={24}
+    vbWidth={24}
+    width={12}
+  >
+    <RNSVGGroup
+      fill={
+        {
+          "payload": 4294967295,
+          "type": 0,
+        }
+      }
+      propList={
+        [
+          "fill",
+          "stroke",
+          "strokeWidth",
+          "strokeLinecap",
+          "strokeLinejoin",
+        ]
+      }
+      stroke={
+        {
+          "payload": 4294967295,
+          "type": 0,
+        }
+      }
+      strokeLinecap={1}
+      strokeLinejoin={1}
+      strokeWidth={1}
+    >
+      <RNSVGPath
+        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+        fill={
+          {
+            "payload": 4278190080,
+            "type": 0,
+          }
+        }
+      />
+    </RNSVGGroup>
+  </RNSVGSvgView>
+  <RNSVGSvgView
+    align="xMidYMid"
+    bbHeight={12}
+    bbWidth={12}
+    fill="none"
+    focusable={false}
+    height={12}
+    meetOrSlice={0}
+    minX={0}
+    minY={0}
+    stroke="white"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={1}
+    style={
+      [
+        {
+          "backgroundColor": "transparent",
+          "borderWidth": 0,
+        },
+        {
+          "flex": 0,
+          "height": 12,
+          "width": 12,
+        },
+      ]
+    }
+    testID="star-icon"
+    vbHeight={24}
+    vbWidth={24}
+    width={12}
+  >
+    <RNSVGGroup
+      fill={null}
+      propList={
+        [
+          "fill",
+          "stroke",
+          "strokeWidth",
+          "strokeLinecap",
+          "strokeLinejoin",
+        ]
+      }
+      stroke={
+        {
+          "payload": 4294967295,
+          "type": 0,
+        }
+      }
+      strokeLinecap={1}
+      strokeLinejoin={1}
+      strokeWidth={1}
+    >
+      <RNSVGPath
+        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+        fill={
+          {
+            "payload": 4278190080,
+            "type": 0,
+          }
+        }
+      />
+    </RNSVGGroup>
+  </RNSVGSvgView>
+  <RNSVGSvgView
+    align="xMidYMid"
+    bbHeight={12}
+    bbWidth={12}
+    fill="none"
+    focusable={false}
+    height={12}
+    meetOrSlice={0}
+    minX={0}
+    minY={0}
+    stroke="white"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={1}
+    style={
+      [
+        {
+          "backgroundColor": "transparent",
+          "borderWidth": 0,
+        },
+        {
+          "flex": 0,
+          "height": 12,
+          "width": 12,
+        },
+      ]
+    }
+    testID="star-icon"
+    vbHeight={24}
+    vbWidth={24}
+    width={12}
+  >
+    <RNSVGGroup
+      fill={null}
+      propList={
+        [
+          "fill",
+          "stroke",
+          "strokeWidth",
+          "strokeLinecap",
+          "strokeLinejoin",
+        ]
+      }
+      stroke={
+        {
+          "payload": 4294967295,
+          "type": 0,
+        }
+      }
+      strokeLinecap={1}
+      strokeLinejoin={1}
+      strokeWidth={1}
+    >
+      <RNSVGPath
+        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+        fill={
+          {
+            "payload": 4278190080,
+            "type": 0,
+          }
+        }
+      />
+    </RNSVGGroup>
+  </RNSVGSvgView>
+</View>
+`;

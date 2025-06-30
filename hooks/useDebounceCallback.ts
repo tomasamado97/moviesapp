@@ -1,26 +1,27 @@
-import { useEffect, useMemo, useRef } from 'react'
+// This was imported from usehooks-ts, a website with useful hooks.
+import { useEffect, useMemo, useRef } from 'react';
 import { useUnmount } from './useUnmount';
 
 import debounce from 'lodash.debounce';
 
-
 type DebounceOptions = {
-  leading?: boolean
-  trailing?: boolean
-  maxWait?: number
-}
+  leading?: boolean;
+  trailing?: boolean;
+  maxWait?: number;
+};
 
 type ControlFunctions = {
-  cancel: () => void
-  flush: () => void
-  isPending: () => boolean
-}
+  cancel: () => void;
+  flush: () => void;
+  isPending: () => boolean;
+};
 
 export type DebouncedState<T extends (...args: any) => ReturnType<T>> = ((
   ...args: Parameters<T>
 ) => ReturnType<T> | undefined) &
-  ControlFunctions
+  ControlFunctions;
 
+// Hook to handle a debounce callback to be called after a certain delay.
 export function useDebounceCallback<T extends (...args: any) => ReturnType<T>>(
   func: T,
   delay = 500,
@@ -30,36 +31,36 @@ export function useDebounceCallback<T extends (...args: any) => ReturnType<T>>(
 
   useUnmount(() => {
     if (debouncedFunc.current) {
-      debouncedFunc.current.cancel()
+      debouncedFunc.current.cancel();
     }
-  })
+  });
 
   const debounced = useMemo(() => {
-    const debouncedFuncInstance = debounce(func, delay, options)
+    const debouncedFuncInstance = debounce(func, delay, options);
 
     const wrappedFunc: DebouncedState<T> = (...args: Parameters<T>) => {
-      return debouncedFuncInstance(...args)
-    }
+      return debouncedFuncInstance(...args);
+    };
 
     wrappedFunc.cancel = () => {
-      debouncedFuncInstance.cancel()
-    }
+      debouncedFuncInstance.cancel();
+    };
 
     wrappedFunc.isPending = () => {
-      return !!debouncedFunc.current
-    }
+      return !!debouncedFunc.current;
+    };
 
     wrappedFunc.flush = () => {
-      return debouncedFuncInstance.flush()
-    }
+      return debouncedFuncInstance.flush();
+    };
 
-    return wrappedFunc
-  }, [func, delay, options])
+    return wrappedFunc;
+  }, [func, delay, options]);
 
   // Update the debounced function ref whenever func, wait, or options change
   useEffect(() => {
-    debouncedFunc.current = debounce(func, delay, options)
-  }, [func, delay, options])
+    debouncedFunc.current = debounce(func, delay, options);
+  }, [func, delay, options]);
 
-  return debounced
+  return debounced;
 }

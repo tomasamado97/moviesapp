@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieCard Matches snapshot component 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "opacity": 1,
+    }
+  }
+  testID="movie-touchable"
+>
+  <View
+    accessibilityIgnoresInvertColors={true}
+    style={
+      {
+        "borderRadius": 10,
+        "height": 200,
+        "margin": 10,
+        "width": 160,
+      }
+    }
+  >
+    <Image
+      resizeMode="cover"
+      source={
+        {
+          "uri": "https://image.tmdb.org/t/p/w500/poster.jpg",
+        }
+      }
+      style={
+        [
+          {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          {
+            "height": 200,
+            "width": 160,
+          },
+          {
+            "borderRadius": 10,
+          },
+        ]
+      }
+    />
+    <BVLinearGradient
+      colors={
+        [
+          3003121664,
+          0,
+        ]
+      }
+      endPoint={
+        {
+          "x": 0,
+          "y": 0.9,
+        }
+      }
+      locations={null}
+      startPoint={
+        {
+          "x": 0,
+          "y": 0.2,
+        }
+      }
+      style={
+        {
+          "alignItems": "flex-start",
+          "borderRadius": 10,
+          "display": "flex",
+          "flex": 1,
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Text
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        style={
+          [
+            {
+              "color": "#11181C",
+            },
+            {
+              "fontSize": 16,
+              "lineHeight": 24,
+            },
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            {
+              "color": "white",
+              "paddingHorizontal": 10,
+              "paddingTop": 10,
+            },
+          ]
+        }
+        testID="movie-title"
+      >
+        Test movie
+      </Text>
+    </BVLinearGradient>
+  </View>
+</View>
+`;
